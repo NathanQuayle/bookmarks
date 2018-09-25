@@ -1,7 +1,6 @@
 # Bookmarks
 
 ## Outline
----
 This project will highlight databse and UI knowledge.
 In this project we will build a bookmark manager web application.
 
@@ -9,24 +8,20 @@ A bookmark manager is a website to maintain a collection of bookmarks (URLs). Yo
 
 ![Domain model](https://i.imgur.com/vYYb0Wq.png)
 
----
-
-#### User Stories
+## User Stories
 ```
 As a user
 
-I want to be able to see a list of my bookmarks
+So that I can access my favourite websites quickly
 
-So that I can view my current bookmarks
+I'd like to be able to see a list of my bookmarks
+
 ```
 
 ```
 As a user
 
-I want to be able to add bookmarks
+So that I can add more of my favourite websites
 
-So that I can increase my list of bookmarks
+I want to be able to add to my existing bookmarks
 ```
-
-
----
