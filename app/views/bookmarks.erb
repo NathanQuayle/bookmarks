@@ -1,5 +1,12 @@
+<%= flash[:notice] %>
+
 <ul>
   <% Bookmarks.all.each do |bookmark| %>
     <li><%= bookmark %></li>
   <% end %>
-</ul> 
+</ul>
+
+<form action='/bookmarks' method="post">
+  <input type='text' required name='add_url'>
+  <input type='submit' value='Submit'>
+</form>

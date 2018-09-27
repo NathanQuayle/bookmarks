@@ -5,6 +5,7 @@ ruby '2.5.1'
 gem 'rake'
 gem 'shotgun'
 gem 'sinatra'
+gem "sinatra-flash", "~> 0.3.0"
 
 group :test do
   gem 'capybara'
