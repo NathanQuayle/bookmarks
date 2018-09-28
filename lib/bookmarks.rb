@@ -8,8 +8,13 @@ class Bookmarks
   end
    
   def self.create(url)
-    conn = PG.connect(dbname: ENV['DATABASE'])
-    conn.exec("INSERT INTO bookmarks (url) VALUES('#{url}')")
+    if(real?(url))
+      conn = PG.connect(dbname: ENV['DATABASE'])
+      conn.exec("INSERT INTO bookmarks (url) VALUES('#{url}')")
+      "#{url} added successfully!"
+    else
+      "Please enter a valid website!"
+    end
   end
 
   def self.real?(url)

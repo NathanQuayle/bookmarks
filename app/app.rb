@@ -11,7 +11,7 @@ class BookmarkManager < Sinatra::Base
   ENV['DATABASE'] ||= 'bookmark_manager'
 
   get '/' do
-    'Hello world!'
+    redirect('/bookmarks')
   end
 
   get '/bookmarks' do
@@ -19,11 +19,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/bookmarks' do
-    if Bookmarks.real?(@params[:add_url])  
-      Bookmarks.create(@params[:add_url])
-    else
-      flash[:notice] = "Please enter a valid website!"
-    end
+    flash[:notice] = Bookmarks.create(@params[:add_url])
     redirect '/bookmarks'
   end
 

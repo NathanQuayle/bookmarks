@@ -5,7 +5,7 @@ feature 'should show a list of bookmarks' do
   scenario 'expect to display bookmarks' do
     database.exec("INSERT INTO bookmarks(url) VALUES ('http://www.google.com')")
     database.exec("INSERT INTO bookmarks(url) VALUES ('http://www.youtube.com')")
-    visit '/bookmarks'
+    visit('/bookmarks')
     expect(page).to have_content("http://www.google.com")
     expect(page).to have_content("http://www.youtube.com")
   end  
