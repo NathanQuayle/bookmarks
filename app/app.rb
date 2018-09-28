@@ -5,6 +5,7 @@ require_relative '../lib/bookmarks.rb'
 class BookmarkManager < Sinatra::Base
 
   enable :sessions
+  # fixes issue with flash and rackup
   set :session_secret, "My session secret"
 
   register Sinatra::Flash
